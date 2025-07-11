@@ -7,8 +7,8 @@ import seaborn as sns
 # Título de la aplicación
 st.title('Análisis de Jugadores de Fútbol')
 
-# URL del archivo en GitHub (asegúrate de obtener la URL raw de tu archivo .xlsx en GitHub)
-file_url = 'https://raw.githubusercontent.com/usuario/repositorio/master/DataSet_Jugadores_Categorizado-bpa.xlsx'  # Reemplaza esta URL por la correcta
+# URL del archivo en GitHub (URL raw del archivo Excel)
+file_url = 'https://raw.githubusercontent.com/Gabriel2564/TF/b0e20aca29299e25742f16d42966c1386e325b5f/DataSet_Jugadores_Categorizado-bpa.xlsx'
 
 # Cargar el dataset desde la URL
 df = pd.read_excel(file_url)
