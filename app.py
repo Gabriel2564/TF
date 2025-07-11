@@ -7,11 +7,11 @@ import seaborn as sns
 # Título de la aplicación
 st.title('Análisis de Jugadores de Fútbol')
 
-# Ruta del archivo (asegúrate de que el archivo esté en la ubicación correcta)
-file_path = 'C:\\Gabriel\\Business Predictive Analitycs\\TF\\DataSet_Jugadores_Categorizado-bpa.xlsx'
+# URL del archivo en GitHub (asegúrate de obtener la URL raw de tu archivo .xlsx en GitHub)
+file_url = 'https://raw.githubusercontent.com/usuario/repositorio/master/DataSet_Jugadores_Categorizado-bpa.xlsx'  # Reemplaza esta URL por la correcta
 
-# Cargar el dataset
-df = pd.read_excel(file_path)
+# Cargar el dataset desde la URL
+df = pd.read_excel(file_url)
 
 # Mostrar las primeras filas del archivo
 st.write("Vista previa de los datos:")
@@ -137,7 +137,7 @@ def compare_players(player1_index, player2_index, dataframe):
     elif score2 > score1:
         return f"{player2_name} es mejor que {player1_name}."
     else:
-        return f"Los jugadores {player1_name} y {player2_name} son similares."
+        return f"Los jugadores {player1_name} y {player2_name} son comparables."
 
 if player1_index is not None and player2_index is not None:
     result = compare_players(player1_index, player2_index, df)
